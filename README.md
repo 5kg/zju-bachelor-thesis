@@ -1,3 +1,3 @@
 ZJU Bachelor's Thesis LaTex Template
 ====================================
-by pluskid, remenberl
+by pluskid, remenberli, chevalun
