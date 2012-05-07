@@ -2,11 +2,23 @@
 %==============================================================
 %==============================================================
 \usepackage{url}
-\usepackage{subfigure}
 
 %一些全局工具的定义
 \DeclareMathOperator*{\argmin}{arg\,min}
 \DeclareMathOperator*{\argmax}{arg\,max}
+\newcommand{\ud}{\mathop{\mathrm{{}d}}\mathopen{}}
+\newenvironment{abstract}{\vskip.075in\centerline{\bf
+摘要}\vspace{0.2ex}\begin{quotation}}{\par\end{quotation}}
+\newenvironment{references}{\vskip.075in{\bf
+参考文献}\vspace{0.2ex}}{\par}
+\usepackage[unicode=true,colorlinks,linkcolor=black,anchorcolor=black,citecolor=black]{hyperref}
+
+\AtEndDocument{\hypersetup{
+					pdfauthor={\zjuauthornamee},
+            		pdftitle={本科生毕业论文开题报告},
+            		pdfproducer={XeLaTeX with hyperref},
+            		pdfcreator={XeLaTeX}}}
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 
 %==============================================================
 %==============================================================
@@ -24,7 +36,7 @@
   %个人信息：{年级}{专业名称}
   \zjuinfo{}{}
   %学院信息：{学院中文}{学院英文}
-  \zjucollege{}{}
+  \zjucollege{计算机科学与技术学院}{College of Computer Science and Technology}
 
 %==============================================================
 

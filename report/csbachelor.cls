@@ -33,7 +33,7 @@
    \def\zjuside{O}
 \fi
 
-\RequirePackage[top=3.8cm,bottom=3.8cm,left=3.2cm,right=3.2cm]{geometry}
+\RequirePackage[top=3.8cm,bottom=3.8cm,left=3.2cm,right=3.2cm,bindingoffset=0.5cm]{geometry}
 
 \RequirePackage{ifthen}
 \RequirePackage{calc}
@@ -77,7 +77,6 @@
 \RequirePackage{booktabs}
 \RequirePackage{caption}
 \DeclareCaptionLabelSeparator{zju}{\hspace{1em}} %定义图表编号与标题间的间隔距离
-\captionsetup{labelsep=zju}
 \RequirePackage{multirow}
 \RequirePackage{dcolumn}
 \RequirePackage{colortbl}
@@ -94,7 +93,8 @@
 \setlength{\parindent}{2.5em}
 
 \renewcommand\thesection{\arabic{section}~}
-\renewcommand{\baselinestretch}{1.6}%1.6倍行距
+\RequirePackage{setspace}
+\doublespacing
 \renewcommand{\arraystretch}{0.7}
 \DeclareRobustCommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
 \DeclareRobustCommand{\xiaochu}{\fontsize{36pt}{\baselineskip}\selectfont}
@@ -204,6 +204,7 @@
 \newtheorem{zjudefine}{定义~}[chapter]
 \newtheorem{zjutheorem}{定理~}[chapter]
 \newtheorem{zjuproposition}{命题~}[chapter]
+\captionsetup{font=singlespacing, labelsep=zju}
 \newenvironment{zjuproof}{\begin{proof}[\textnormal{\lishu 证明~}]}{\end{proof}}
 \newcolumntype{.}{D{.}{.}{2.4}}
 \AtBeginDocument{%
